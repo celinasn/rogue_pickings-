@@ -1,147 +1,203 @@
 /******** GLOBAL STYLES ********/
+html{
+    font-size: 16px;
+}
+
 body {
     font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+}
+
+.container {
+	max-width: 1200px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 }
 
 h1,
 h2,
-h3,
-h4 {
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-h1 {
-    font-size: 30px;
-}
-
-h2 {
-    font-size: 24px;
+h3 {
+	color: black;
+	text-transform: uppercase;
+	font-weight: 700;
 }
 
 h3 {
-    font-size: 20px;
-}
-
-h4 {
-    font-size: 12px;
+	font-size: .75em;
 }
 
 p {
-    line-height: 36px;
+	font-size: 14px;
+	line-height: 21px;
 }
 
-.content-wrapper {
-    width: 1200px;
-    margin: 0 auto;
-    overflow: auto;
-}
-
-/******** HEADER STYLES ********/
-header h1 {
-    /*    outline: 3px dotted red; */
-    width: 300px;
-    float: left;
+ul {
     margin: 0;
-    padding: 36px 0;
 }
 
+/*The widths are in a percentage!*/
+header {
+	border-bottom: 3px solid #77a466;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+header h1 {
+    font-size: 1.875em;
+	margin: 0;
+    padding: 38px 20px 20px 20px; 
+    border-bottom: 3px solid #77a466; 
+    width: 100%;
+}
 header h1 span {
-    color: #45610E;
+	color: #77a466;
 }
 
 header nav {
-    /*    outline: 3px dotted red; */
-    width: 300px;
-    float: right;
-    padding: 44px 0;
+    padding: 20px 0; 
+    width: 100%; 
 }
 
 header nav ul {
-    margin: 0;
-    padding: 0;
-    text-align: right;
+	margin: 0;
+	padding: 0;
 }
 
 header nav ul li {
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 0 10px;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: .875em;
+    padding: 10px 0;
+    list-style: none;
 }
 
 header nav ul li a {
-    text-decoration: none;
-    color: #45610E;
+	text-decoration: none;
+	color:#77a466;
 }
 
-/********  MAIN STYLES ********/
-/******** TOP SECTION ********/
+/*The widths are in a percentage!*/
+.top-section,
+.bottom-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
 .main-image img {
-    border-top: 3px solid #77A466;
-    border-bottom: 3px solid #77A466;
+	width: 100%;
+	border-bottom: 3px solid #77a466;
 }
 
 .main-title h2 {
-    color: #45610E;
-    padding: 5px 0;
+	text-align: left;
+	padding: 5px 0;
+    color: #77a466;
+    font-size: 1.125em;
 }
 
-/******** BOTTOM SECTION ********/
-.bottom-section .content-wrapper {
-    border-top: 5px solid #EEE;
-    border-bottom: 5px solid #EEE;
+.main-title p {
+	padding: 0;
+	font-size: 1em;
+	line-height: 1.5625;
 }
 
 .section-one,
 .section-two,
 .section-three {
-    /* outline: 3px dotted red;  */
-    box-sizing: border-box;
-    float: left;
-    padding: 0 40px;
+    border-top: 1px solid #eee;
+    width: 100%;
 }
 
-.section-one {
-    width: 350px;
+.menu {
+	list-style: none;
+	padding: 0;
 }
 
-.section-two {
-    width: 500px;
-    border-left: 5px solid #EEE;
-    border-right: 5px solid #EEE;
+.menu li {
+	padding: 10px 0;
+	color:#77a466;
 }
 
-.section-three {
-    width: 350px;
+.reviews {
+	color: #333;
+	font-size: 1em;
+	line-height: 1.3125;
 }
 
-.bottom-section h3 {
-    margin: 30px 0;
+.address {
+	font-size: 1em;
+	line-height: 1.5;
 }
 
-.menu-list {
-    padding-left: 0;
-    list-style: none;
-}
-
-.menu-list li {
-    color: #45610E;
-    line-height: 36px;
-}
-
-/******** FOOTER STYLES ********/
+/*The widths are in a percentage!*/
 footer {
+	border-top: 3px solid #eee;
     text-align: center;
-    margin-top: 8px;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 }
 
 footer span {
-    font-family: 'Galada', cursive;
-    text-transform: lowercase;
-    color: #45610E;
-    font-size: 14px;
+	font-family: 'Galada', cursive;
+	text-transform: lowercase;
+	color: #77a466;
+	font-size: .875em;
+}
+
+@media only screen and (min-width: 768px) {
+    .bottom-section{
+        justify-content: space-between;
+        align-items: flex-start;
+        border-top: 1px solid #eee;
+    }
+
+    .section-one,
+    .section-two,
+    .section-three {
+        border-top: none;
+        flex-basis: 30%;
+    }
+
+    .section-two {
+        border-left: 1px solid #eee;
+        border-right: 1px solid #eee;
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    header {
+        justify-content: space-between;
+    }
+
+    header h1 {
+        width: 30%;
+        padding: 0;
+        border-bottom: none;
+        text-align: left;
+    }
+
+    header nav {
+        width: 40%;
+    }
+
+    header nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
 }
